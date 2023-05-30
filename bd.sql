@@ -1,0 +1,8 @@
+CREATE TABLE quarto (
+    numero INTEGER PRIMARY KEY,
+    camas_solteiro INTEGER NOT NULL CHECK (camas_solteiro >= 0),
+    camas_casal INTEGER NOT NULL CHECK (camas_casal >= 0),
+    area_m2 INTEGER NOT NULL CHECK (area_m2 > 0),
+    reservado INTEGER NOT NULL CHECK (reservado IN (0, 1)),
+    valor_diaria INTEGER NOT NULL CHECK (valor_diaria > 0)
+);
